@@ -1,26 +1,24 @@
 
 def timeConversion(timeStamp):
-    time = str(timeStamp[0:-2]).split(":")
-    min = time[1]
-    hrs = time[0]
-    sec = time[2]
+    time = timeStamp[0:len(timeStamp)-2].split(":")
+    hrs = int(time[0])
+    converted_time = ""
     prefix = str(timeStamp[-2:])
 
-    if prefix == "AM":
-        if hrs == "12":
+    if prefix == "AM" and hrs != 12:
+        converted_time = time[0] + ":" + time[1] + ":" + time[2]
+    elif prefix == "AM" and hrs == 12:
+        converted_time = "00" + ":" + time[1] + ":" + time[2]
+    elif prefix == "PM" and hrs == 12:
+        converted_time = "12" + ":" + time[1] + ":" + time[2]
+    elif prefix == "PM" and hrs != 12:
+        hrs += 12
+        converted_time = str(hrs) + ":" + time[1] + ":" + time[2]
 
-
-
-    if hrs == 12 and prefix == "AM":
-        return "00:" + str(min) + ":" + str(sec)
-    elif hrs == 12 and prefix == "PM":
-        return "12:" + str(min) + ":" + str(sec)
-    elif hrs > 12 and prefix == "PM":
-        str(hrs + 12) + ":" + str(min) + ":" + str(sec)
-
+    return converted_time
 
 
 if __name__== '__main__':
-    timeStamp = "12:59:00AM"
+    timeStamp = "11:59:00PM"
     result = timeConversion(timeStamp)
     print(result)
