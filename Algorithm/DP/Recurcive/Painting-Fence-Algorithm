@@ -1,0 +1,12 @@
+
+def count_way(fenceCount, colourCount):
+    pass
+    # TODO
+
+
+
+if __name__ == "__main__":
+    fence = int(input().strip())
+    colour = int(input().strip())
+    count_way(fence, colour)
+
