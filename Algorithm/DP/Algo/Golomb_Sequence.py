@@ -11,6 +11,9 @@ def get_golomb_sequence(n):
 
 
 if __name__ == '__main__':
+    '''
+        https://www.geeksforgeeks.org/golomb-sequence/
+    '''
     n  = int(input().strip())
     print(get_golomb_sequence(n))
 
