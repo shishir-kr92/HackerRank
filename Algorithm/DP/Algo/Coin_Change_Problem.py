@@ -9,6 +9,7 @@ def using_dp(coins, total_sum, N):
                 x = K[i][j-coins[i - 1]] if j - coins[i - 1] >= 0 else 0
                 y = K[i-1][j] if i-1 >=0 else 0
                 K[i][j] = x + y
+    print(K)
     return K[i][j]
 
 
