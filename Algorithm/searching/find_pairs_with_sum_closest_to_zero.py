@@ -1,3 +1,18 @@
+
+
+'''
+An Array of integers is given, both +ve and -ve.
+You need to find the two elements such that their sum is closest to zero.
+
+Example
+num_list = [1, 4, 45, 6, 10, -1]
+pair (1, -1)
+
+LINK:
+https://www.geeksforgeeks.org/two-elements-whose-sum-is-closest-to-zero/
+'''
+
+
 def find_pair_sorting(num_list, n):
     num_list.sort()
     print(num_list)
@@ -22,17 +37,6 @@ def find_pair_sorting(num_list, n):
     return (l_num, r_num)
 
 
-def find_pair_hashing(num_list, n):
-    temp_set = set()
-    abs_sum =  yyyyyyyy
-
-    for num in num_list:
-        temp = required_sum - num
-
-
-
-
-
 # Driver program to test the functions
 def main():
     num_list = [1, 4, 45, 6, 10, -1]
@@ -42,12 +46,6 @@ def main():
         print(f"number with sum nearest to zero, number = {result}")
     else:
         print("Array doesn't have two elements with the given sum")
-
-    # result = find_pair_sorting(num_list, len(num_list), required_sum)
-    # if result:
-    #     print(f"Array has two elements with the given sum, number = {result}")
-    # else:
-    #     print("Array doesn't have two elements with the given sum")
 
 
 if __name__ == "__main__":
