@@ -23,7 +23,7 @@ def find_missing_number_xor(num_list):
     for i in range(2, n + 2):
         b = b ^ i
 
-    return  b ^ a
+    return b ^ a
 
 
 def main():
